@@ -10,4 +10,6 @@ while True:
     client.send(x.encode())
     data = client.recv(1024).decode()
     print("Received from server:", data)
+    y=client.recv(1024).decode()
+    print(f"recieved from Master: {y}")
 client.close()
